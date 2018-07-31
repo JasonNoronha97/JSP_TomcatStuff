@@ -48,11 +48,19 @@ public class EmployeeStuffServlet extends HttpServlet {
 		
 		double net = salary+bonus-tax;
 		
-		pw.println("<br>EmployeeName\t:"+request.getParameter("Name"));
-		pw.println("<br>Basic Salary\t:\tRs."+(float)salary);
-		pw.println("<br>Bonus\t\t:\tRs."+bonus);
-		pw.println("<br>Tax\t\t:\tRs."+tax);
-		pw.println("<br>Net\t\t:\tRs."+net);
+		pw.println("<br>EmployeeName:"+request.getParameter("Name")+"</td></tr>");
+		pw.println("<br>Basic Salary:Rs."+(float)salary+"</td></tr>");
+		pw.println("<br>Bonus:Rs."+bonus+"</td></tr>");
+		pw.println("<br>Tax:Rs."+tax+"</td></tr>");
+		pw.println("<br>Net:Rs."+net+"</td></tr>");
+		
+		
+		pw.println("<table border=\"2\">");
+		pw.println("<tr><td>EmployeeName</td><td>:</td><td>"+request.getParameter("Name")+"</td></tr>");
+		pw.println("<tr><td>Basic Salary</td><td>:</td><td>Rs."+(float)salary+"</td></tr>");
+		pw.println("<tr><td>Bonus</td><td>:</td><td>Rs."+bonus+"</td></tr>");
+		pw.println("<tr><td>Tax</td><td>:</td><td>Rs."+tax+"</td></tr>");
+		pw.println("<tr><td>Net</td><td>:</td><td>Rs."+net+"</td></tr>");
 		
 //		response.getWriter().append("<br><br>Served at: ").append(request.getRealPath(arg0));
 	}
