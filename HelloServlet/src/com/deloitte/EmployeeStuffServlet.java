@@ -48,6 +48,7 @@ public class EmployeeStuffServlet extends HttpServlet {
 		
 		double net = salary+bonus-tax;
 		
+		
 		pw.println("<br>EmployeeName:"+request.getParameter("Name")+"</td></tr>");
 		pw.println("<br>Basic Salary:Rs."+(float)salary+"</td></tr>");
 		pw.println("<br>Bonus:Rs."+bonus+"</td></tr>");
